@@ -1,6 +1,6 @@
 <img src="https://i.imgur.com/sA6iEbw.jpg">
 
-# JavaScript Arrays Lab
+# JavaScript Arrays
 
 ## Introduction
 
@@ -16,7 +16,9 @@ Title your repl **JS Array Lab**.
 
 Copy the exercises below into the repl's **script.js** file and code away!
 
-This lab is **a DELIVERABLE**. When completed, please slack the link to your repl to your instructors.
+## Submitting
+
+IF lab is **a DELIVERABLE**. When completed, ** Fork & Clone ** this reposiotry. Then add a `solution.txt` file to this repo and paste your solution code into it (copy/paste from your repl.it). Make a pull request after adding, committing, and pushing your code to your fork!
 
 ## Exercise
 
