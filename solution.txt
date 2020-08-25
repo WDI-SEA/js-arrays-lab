@@ -16,7 +16,7 @@ Exercise 2:
 
 // Complete Exercise 2 below...
 
-foods.push('pizza','cheeseburger')
+foods.push('pizza', 'cheeseburger')
 
 console.log('Exercise 2 Result:\n',  foods);
 
@@ -38,7 +38,7 @@ Exercise 4:
 
 // Complete Exercise 4 below...
 
-const favFood = foods[1]
+let favFood = foods[1]
 
 console.log('Exercise 4 Result:\n', favFood);
 
@@ -49,7 +49,8 @@ Exercise 5:
 
 // Complete Exercise 5 below...
 
-foods.splice(foods.indexOf('cheeseburger'),0,'tofu')
+//I'm not actually sure I understand what I did here. I tried splice and I played around with it until it came out correctly,
+foods.splice(2, 0, 'tofu')
 
 console.log('Exercise 5 Result:\n', foods);
 
@@ -59,6 +60,8 @@ Exercise 6:
 */
 
 // Complete Exercise 6 below...
+
+//Okay after doing some googling I found something that explained it in a way I uderstand. First spot tells it where to start the splice, comma, then how many elements to remove. Right? Please god tell me I'm right.
 
 foods.splice(foods.indexOf('pizza'),1,'sushi','cupcake')
 
@@ -72,9 +75,7 @@ Exercise 7:
 
 // Complete Exercise 7 below...
 
-let yummy = [];
-
-yummy = foods.slice(foods.indexOf('sushi'),3);
+let yummy = foods.slice(1,3)
 
 console.log('Exercise 7 Result:\n', yummy);
 
@@ -85,7 +86,7 @@ Exercise 8:
 
 // Complete Exercise 8 below...
 
-let soyIdx = foods.indexOf('tofu');
+let soyIdx = foods.indexOf('tofu') 
 
 console.log('Exercise 8 Result:\n', soyIdx);
 
@@ -97,7 +98,7 @@ Exercise 9:
 
 // Complete Exercise 9 below...
 
-const allFoods = foods[0] + ' -> ' + foods[1] + ' -> ' + foods[2] + ' -> ' + foods[3] + ' -> ' + foods[4]
+let allFoods = foods.join(' -> ')
 
 console.log('Exercise 9 Result:\n', allFoods);
 
@@ -120,17 +121,13 @@ Exercise 11:
 
 const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
 
+
 // Complete Exercise 11 below...
 
 let odds = [];
+nums.forEach(element => { if(element % 2 != 0){ odds.push(element)}});
 
-nums.forEach(findOdds);
 
-function findOdds(num) {
-   if (num % 2 === 1) {
-       odds.push(num);
- }
-}
 console.log('Exercise 11 Result:\n', odds);
 
 /*
@@ -147,17 +144,9 @@ let fizz = [];
 let buzz = [];
 let fizzbuzz = [];
 
-nums.forEach(fuzzbizz);
-
-function fuzzbizz(num){
-  if (num % 3 === 0 && num % 5 === 0) {
-    fizzbuzz.push(num);
-  } else if (num % 3 === 0) {
-    fizz.push(num);
-  } else if (num % 5 === 0) {
-    buzz.push(num);
-  }
-}
+nums.forEach(element => { if(element % 5 === 0 && element % 3 === 0){fizzbuzz.push(element)} 
+else if(element % 5 === 0){buzz.push(element)} 
+else if(element % 3 === 0){fizz.push(element)}});
 
 console.log('Exercise 12 Results:');
 console.log('  fizz:', fizz);
@@ -179,9 +168,7 @@ const numArrays = [
 
 // Complete Exercise 13 below...
 
-const lastVal = numArrays.length - 1;
-
-const numList = numArrays[lastVal];
+let numList = numArrays.slice(-1);
 
 console.log('Exercise 13 Result:\n', numList);
 
@@ -192,8 +179,8 @@ Exercise 14:
 
 // Complete Exercise 14 below...
 
-const num =numArrays[2][1];
-
+numArrays.forEach(element => {if(element.includes(66)){num = element[element.indexOf(66)]}});
+ 
 console.log('Exercise 14 Result:\n', num);
 
 /*
@@ -205,11 +192,8 @@ Exercise 15:
 // Complete Exercise 15 below...
 
 let total = 0;
-
-numArrays.flat(3).forEach(bigSum);
-
-function bigSum(n) {
-  total += n;
-}
+numArrays.forEach(array => {array.forEach((element) => {total += element})});
 
 console.log('Exercise 15 Result:\n', total);
+
+//I'm not completely confident I completely understood everything I did. It was a lot of trial and error. I got the correct results but I'm not sure I understand how I got to my results, it just seemed like a long chain of trying over and over.
