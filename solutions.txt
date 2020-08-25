@@ -1,28 +1,3 @@
-<img src="https://i.imgur.com/sA6iEbw.jpg">
-
-# JavaScript Arrays
-
-## Introduction
-
-This lab provides an opportunity to practice defining, accessing and manipulating arrays.
-
-> **Note:** Feel free to reference the arrays lesson, collaborate, google, etc.
-
-## Setup & Instructions
-
-Create a new HTML/CSS/JS repl on [repl.it](https://repl.it) for these exercises.
-
-Title your repl **JS Array Lab**.
-
-Copy the exercises below into the repl's **script.js** file and code away!
-
-## Submitting
-
-IF lab is **a DELIVERABLE**. When completed, ** Fork & Clone ** this reposiotry. Then add a `solution.txt` file to this repo and paste your solution code into it (copy/paste from your repl.it). Make a pull request after adding, committing, and pushing your code to your fork!
-
-## Exercise
-
-```js
 /*
 Exercise 1:
   - Define an empty array named foods
@@ -154,18 +129,7 @@ const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
 
 // Complete Exercise 11 below...
 
-let odds = [];
-nums.forEach(element => { if(element % 2 != 0){ odds.push(element)}});
 
-nums.forEach(findOdds);
-
-function findOdds(num) {
-   if (num % 2 === 1) {
-       odds.push(num);
- }
-}
-
-// this is code that Bruno supplied to the class via git hub, I did not write it. I inputed it to try and understand it. Same with the remaining questions (12, 13, 14, 15)
 
 
 // var odd = function isOdd(n) {
@@ -188,20 +152,6 @@ Exercise 12:
 
 // Complete Exercise 12 below...
 
-nums.forEach(fuzzbizz);
-
-function fuzzbizz(num){
-  if (num % 3 === 0 && num % 5 === 0) {
-    fizzbuzz.push(num);
-  } else if (num % 3 === 0) {
-    fizz.push(num);
-  } else if (num % 5 === 0) {
-    buzz.push(num);
-  }
-}
-nums.forEach(element => { if(element % 5 === 0 && element % 3 === 0){fizzbuzz.push(element)} 
-else if(element % 5 === 0){buzz.push(element)} 
-else if(element % 3 === 0){fizz.push(element)}});
 
 
 console.log('Exercise 12 Results:');
@@ -233,7 +183,7 @@ Exercise 14:
   - Given the above numArrays array, access the number 66 and assign to a variable named num.
 */
 
-// Complete Exercise 14 below..
+// Complete Exercise 14 below...
 
 var num = numArrays.indexOf(66)
 
