@@ -32,6 +32,9 @@ Exercise 1:
 
 const foods = [];
 
+foods.push('pizza')
+foods.push('cheeseburger')
+
 console.log('Exercise 1 Result:\n', foods);
 
 /*
@@ -42,7 +45,6 @@ Exercise 2:
 // Complete Exercise 2 below...
 
 
-
 console.log('Exercise 2 Result:\n',  foods);
 
 /*
@@ -51,6 +53,8 @@ Exercise 3:
 */
 
 // Complete Exercise 3 below...
+
+foods.unshift('taco')
 
 
 
@@ -63,6 +67,8 @@ Exercise 4:
 
 // Complete Exercise 4 below...
 
+const favFood = [];
+favFood.push(foods [1])
 
 
 console.log('Exercise 4 Result:\n', favFood);
@@ -74,16 +80,18 @@ Exercise 5:
 
 // Complete Exercise 5 below...
 
+foods.splice(2,0,'tofu');
 
 
 console.log('Exercise 5 Result:\n', foods);
-
 /*
 Exercise 6:
   - Replace the string 'pizza' in the foods array with the strings 'sushi' & 'cupcake'.
 */
 
 // Complete Exercise 6 below...
+
+foods.splice(1,1,'sushi','cupcakes')
 
 
 
@@ -97,7 +105,7 @@ Exercise 7:
 
 // Complete Exercise 7 below...
 
-
+var yummy = foods.slice(1,3)
 
 console.log('Exercise 7 Result:\n', yummy);
 
@@ -108,6 +116,7 @@ Exercise 8:
 
 // Complete Exercise 8 below...
 
+var soyIdx = foods.indexOf('tofu')
 
 
 console.log('Exercise 8 Result:\n', soyIdx);
@@ -120,7 +129,7 @@ Exercise 9:
 
 // Complete Exercise 9 below...
 
-
+var allFoods = foods.join()
 
 console.log('Exercise 9 Result:\n', allFoods);
 
@@ -131,7 +140,7 @@ Exercise 10:
 
 // Complete Exercise 10 below...
 
-
+var hasSoup = Boolean('soup')
 
 console.log('Exercise 10 Result:\n', hasSoup);
 
@@ -144,6 +153,26 @@ Exercise 11:
 const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
 
 // Complete Exercise 11 below...
+
+let odds = [];
+nums.forEach(element => { if(element % 2 != 0){ odds.push(element)}});
+
+nums.forEach(findOdds);
+
+function findOdds(num) {
+   if (num % 2 === 1) {
+       odds.push(num);
+ }
+}
+
+// this is code that Bruno supplied to the class via git hub, I did not write it. I inputed it to try and understand it. Same with the remaining questions (12, 13, 14, 15)
+
+
+// var odd = function isOdd(n) {
+//   return isEven(Number(n) + 1);
+// }
+
+nums.forEach
 
 
 
@@ -159,6 +188,20 @@ Exercise 12:
 
 // Complete Exercise 12 below...
 
+nums.forEach(fuzzbizz);
+
+function fuzzbizz(num){
+  if (num % 3 === 0 && num % 5 === 0) {
+    fizzbuzz.push(num);
+  } else if (num % 3 === 0) {
+    fizz.push(num);
+  } else if (num % 5 === 0) {
+    buzz.push(num);
+  }
+}
+nums.forEach(element => { if(element % 5 === 0 && element % 3 === 0){fizzbuzz.push(element)} 
+else if(element % 5 === 0){buzz.push(element)} 
+else if(element % 3 === 0){fizz.push(element)}});
 
 
 console.log('Exercise 12 Results:');
@@ -190,8 +233,9 @@ Exercise 14:
   - Given the above numArrays array, access the number 66 and assign to a variable named num.
 */
 
-// Complete Exercise 14 below...
+// Complete Exercise 14 below..
 
+var num = numArrays.indexOf(66)
 
 
 console.log('Exercise 14 Result:\n', num);
@@ -204,21 +248,6 @@ Exercise 15:
 
 // Complete Exercise 15 below...
 
-
+// I am having a hard time with questions 11 through 15. Some seem to be connected to others. I saw that Taylor said we would be learning more about these new methods this week. 
 
 console.log('Exercise 15 Result:\n', total);
-```
-
-## Solution
-
-Try not to peek!
-
-[Solution Repl](https://repl.it/@jim_clark/JS-Arrays-Lab) 
-
-## Additional Resources
-
-- [MDN Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
-
-## Credit
-
-Adapted from GA LA (Downtown)'s [JS arrays lab](https://git.generalassemb.ly/SEI/dt-71/blob/master/units/1_front_end/w01/d2/04-js-arrays-lab.md)
